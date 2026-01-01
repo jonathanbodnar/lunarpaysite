@@ -17,7 +17,7 @@
                 <img src="public/logo.png" alt="LunarPay" class="logo-img">
             </a>
             <div class="nav-links">
-                <a href="https://app.lunarpay.com" class="btn btn-secondary">Sign In</a>
+                <a href="https://app.lunarpay.com/login" class="btn btn-secondary">Sign In</a>
                 <a href="https://app.lunarpay.com/register" class="btn btn-primary">Get Started</a>
             </div>
             <button class="mobile-menu-btn" aria-label="Menu">
@@ -34,7 +34,7 @@
             <div class="container">
                 <h1>The only digital payment platform standing for freedom.</h1>
                 <p class="hero-subtitle">Censorship free infrastructure from gateway to sponsorship banks. LunarPay offers a full-featured payment platform that integrates with your existing business tools.</p>
-                <form class="hero-signup" action="https://app.lunarpay.com/register" method="get">
+                <form class="hero-signup" onsubmit="handleSignup(event, this)">
                     <div class="signup-field">
                         <input type="email" name="email" placeholder="Enter your email" class="signup-input" required>
                         <button type="submit" class="signup-btn">Start Free</button>
@@ -289,7 +289,7 @@
     <div class="sticky-signup" id="stickySignup">
         <div class="sticky-signup-container">
             <span class="sticky-signup-text">Start accepting payments without fear of censorship.</span>
-            <form class="sticky-signup-form" action="https://app.lunarpay.com/register" method="get">
+            <form class="sticky-signup-form" onsubmit="handleSignup(event, this)">
                 <input type="email" name="email" placeholder="Enter your email" class="sticky-signup-input" required>
                 <button type="submit" class="sticky-signup-btn">Start Free</button>
             </form>
@@ -318,7 +318,7 @@
                     </div>
                     <div class="footer-col">
                         <h4>Account</h4>
-                        <a href="https://app.lunarpay.com">Sign In</a>
+                        <a href="https://app.lunarpay.com/login">Sign In</a>
                         <a href="https://app.lunarpay.com/register">Get Started</a>
                     </div>
                 </div>
@@ -354,6 +354,16 @@
         
         window.addEventListener('scroll', handleStickySignup);
         handleStickySignup();
+
+        // Handle signup form submission
+        function handleSignup(event, form) {
+            event.preventDefault();
+            const emailInput = form.querySelector('input[type="email"]');
+            const email = emailInput.value;
+            if (email) {
+                window.location.href = `https://app.lunarpay.com/register?email=${encodeURIComponent(email)}`;
+            }
+        }
 
         // Feature tabs
         const featureTabs = document.querySelectorAll('.feature-tab');
