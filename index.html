@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LunarPay - Payment Infrastructure for Free Speech</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="public/ico.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <img src="public/logo.png" alt="LunarPay" class="logo-img">
+            </a>
+            <div class="nav-links">
+                <a href="https://app.lunarpay.com" class="btn btn-secondary">Sign In</a>
+                <a href="https://app.lunarpay.com/register" class="btn btn-primary">Get Started</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>The only digital payment platform standing for freedom.</h1>
+                <p class="hero-subtitle">Censorship free infrastructure from gateway to sponsorship banks. LunarPay offers a full-featured payment platform that integrates with your existing business tools.</p>
+                <form class="hero-signup" action="https://app.lunarpay.com/register" method="get">
+                    <div class="signup-field">
+                        <input type="email" name="email" placeholder="Enter your email" class="signup-input" required>
+                        <button type="submit" class="signup-btn">Start Free</button>
+                    </div>
+                    <p class="signup-note">Start accepting payments without fear of censorship.</p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Trust Bar -->
+        <section class="trust-bar">
+            <div class="container">
+                <p>Trusted by businesses who refuse to be silenced</p>
+                <div class="trust-logos">
+                    <img src="public/shoutout.png" alt="Shoutout" class="trust-logo">
+                    <img src="public/churchbase.png" alt="ChurchBase" class="trust-logo">
+                    <img src="public/sauce.png" alt="Sauce" class="trust-logo">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2>A full suite payment platform.</h2>
+                <p class="section-subtitle">All the features you'd expect from modern payment infrastructure, without political or religious persecution.</p>
+                
+                <div class="features-showcase">
+                    <div class="features-detail">
+                        <div class="feature-detail-content" data-feature="invoices">
+                            <h3>Professional Invoicing</h3>
+                            <p>Create beautiful, branded invoices in seconds. Send them via email or shareable link, and get paid faster with automatic reminders.</p>
+                            <ul>
+                                <li>Custom branding and templates</li>
+                                <li>Automatic payment reminders</li>
+                                <li>Multi-currency support</li>
+                                <li>Partial payments and deposits</li>
+                            </ul>
+                        </div>
+                        <div class="feature-detail-content" data-feature="customers">
+                            <h3>Customer Management</h3>
+                            <p>Keep track of every customer interaction. View payment history, manage subscriptions, and build lasting relationships.</p>
+                            <ul>
+                                <li>Complete payment history</li>
+                                <li>Customer profiles and notes</li>
+                                <li>Subscription management</li>
+                                <li>Export and reporting</li>
+                            </ul>
+                        </div>
+                        <div class="feature-detail-content" data-feature="links">
+                            <h3>Payment Links</h3>
+                            <p>Generate shareable payment links in seconds. Perfect for social media, emails, or anywhere you connect with customers.</p>
+                            <ul>
+                                <li>No code required</li>
+                                <li>Customizable amounts</li>
+                                <li>QR code generation</li>
+                                <li>Track link performance</li>
+                            </ul>
+                        </div>
+                        <div class="feature-detail-content" data-feature="subscriptions">
+                            <h3>Subscriptions & Recurring</h3>
+                            <p>Set up recurring billing with flexible cycles. Handle upgrades, downgrades, and cancellations automatically.</p>
+                            <ul>
+                                <li>Flexible billing cycles</li>
+                                <li>Free trials and setup fees</li>
+                                <li>Proration handling</li>
+                                <li>Dunning management</li>
+                            </ul>
+                        </div>
+                        <div class="feature-detail-content" data-feature="payouts">
+                            <h3>Fast Payouts</h3>
+                            <p>Get your money when you need it. Choose your payout schedule and receive funds directly to your bank account.</p>
+                            <ul>
+                                <li>Daily or weekly payouts</li>
+                                <li>Multiple bank accounts</li>
+                                <li>Detailed payout reports</li>
+                                <li>No hidden fees</li>
+                            </ul>
+                        </div>
+                        <div class="feature-detail-content" data-feature="security">
+                            <h3>Bank-Grade Security</h3>
+                            <p>Your data and your customers' data is protected with enterprise-level security. PCI DSS compliant from day one.</p>
+                            <ul>
+                                <li>PCI DSS Level 1 compliant</li>
+                                <li>End-to-end encryption</li>
+                                <li>Fraud detection</li>
+                                <li>Two-factor authentication</li>
+                            </ul>
+                        </div>
+                        <div class="feature-detail-content" data-feature="integrations">
+                            <h3>Powerful Integrations</h3>
+                            <p>Connect LunarPay to your favorite tools. Sync with accounting software, automate workflows with Zapier, and more.</p>
+                            <div class="integrations-grid">
+                                <div class="integration-logo">QuickBooks</div>
+                                <div class="integration-logo">Xero</div>
+                                <div class="integration-logo">FreshBooks</div>
+                                <div class="integration-logo">Sage</div>
+                                <div class="integration-logo">Zapier</div>
+                                <div class="integration-logo">Wave</div>
+                            </div>
+                            <div class="migration-note">
+                                <strong>Easy migration from Stripe</strong>
+                                <p>Import your customers, products, subscriptions, invoices, and payment history directly from Stripe. Switch in minutes, not weeks.</p>
+                            </div>
+                        </div>
+                        <div class="feature-detail-content" data-feature="portal">
+                            <h3>Customer Portal</h3>
+                            <p>Give your customers a self-service portal to manage their subscriptions, update payment methods, and view invoices.</p>
+                            <ul>
+                                <li>Branded portal experience</li>
+                                <li>Self-service subscription management</li>
+                                <li>Invoice history and downloads</li>
+                                <li>Payment method updates</li>
+                            </ul>
+                        </div>
+                        <div class="feature-detail-content" data-feature="developers">
+                            <h3>Developer Friendly</h3>
+                            <p>Clean, well-documented APIs and webhooks. Build custom integrations or extend LunarPay to fit your exact needs.</p>
+                            <ul>
+                                <li>RESTful API</li>
+                                <li>Webhooks for all events</li>
+                                <li>SDKs and libraries</li>
+                                <li>Sandbox environment</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="features-tabs">
+                        <button class="feature-tab active" data-target="invoices">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                            </svg>
+                            <span>Invoices</span>
+                        </button>
+                        <button class="feature-tab" data-target="customers">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <span>Customers</span>
+                        </button>
+                        <button class="feature-tab" data-target="links">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                            </svg>
+                            <span>Payment Links</span>
+                        </button>
+                        <button class="feature-tab" data-target="subscriptions">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"></path>
+                                <path d="M21 3v5h-5"></path>
+                            </svg>
+                            <span>Subscriptions</span>
+                        </button>
+                        <button class="feature-tab" data-target="payouts">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                <line x1="1" y1="10" x2="23" y2="10"></line>
+                            </svg>
+                            <span>Payouts</span>
+                        </button>
+                        <button class="feature-tab" data-target="security">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                            <span>Security</span>
+                        </button>
+                        <button class="feature-tab" data-target="integrations">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                            <span>Integrations</span>
+                        </button>
+                        <button class="feature-tab" data-target="portal">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                <line x1="9" y1="21" x2="9" y2="9"></line>
+                            </svg>
+                            <span>Customer Portal</span>
+                        </button>
+                        <button class="feature-tab" data-target="developers">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                            <span>Developers</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <h2>Pricing that fuels freedom.</h2>
+                <p class="section-subtitle">$0/mo, no cc required, no contracts</p>
+                
+                <div class="pricing-card">
+                    <div class="pricing-rate">
+                        <span class="rate">2.75% + 27¢</span>
+                        <span class="rate-label">starting rate per transaction</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Unlimited invoices
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Payment links
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Recurring billing
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Customer management
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            No monthly fees
+                        </li>
+                    </ul>
+                    <a href="https://app.lunarpay.com/register" class="btn btn-primary btn-large">Get started free</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Sticky Signup Footer -->
+    <div class="sticky-signup" id="stickySignup">
+        <div class="sticky-signup-container">
+            <span class="sticky-signup-text">Start accepting payments without fear of censorship.</span>
+            <form class="sticky-signup-form" action="https://app.lunarpay.com/register" method="get">
+                <input type="email" name="email" placeholder="Enter your email" class="sticky-signup-input" required>
+                <button type="submit" class="sticky-signup-btn">Start Free</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <img src="public/logo.png" alt="LunarPay" class="logo-img">
+                    </a>
+                    <p>Payment infrastructure for free speech.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#pricing">Pricing</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="privacy.html">Privacy Policy</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Account</h4>
+                        <a href="https://app.lunarpay.com">Sign In</a>
+                        <a href="https://app.lunarpay.com/register">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LunarPay. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple mobile menu toggle
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+        });
+
+        // Sticky signup footer
+        const stickySignup = document.getElementById('stickySignup');
+        const hero = document.querySelector('.hero');
+        
+        function handleStickySignup() {
+            const heroBottom = hero.offsetTop + hero.offsetHeight;
+            if (window.scrollY > heroBottom - 100) {
+                stickySignup.classList.add('visible');
+            } else {
+                stickySignup.classList.remove('visible');
+            }
+        }
+        
+        window.addEventListener('scroll', handleStickySignup);
+        handleStickySignup();
+
+        // Feature tabs
+        const featureTabs = document.querySelectorAll('.feature-tab');
+        const featureContents = document.querySelectorAll('.feature-detail-content');
+        
+        // Set initial active state
+        featureContents[0].classList.add('active');
+        
+        featureTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.dataset.target;
+                
+                // Update tabs
+                featureTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                // Update content
+                featureContents.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.dataset.feature === target) {
+                        content.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
