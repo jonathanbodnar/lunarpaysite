@@ -338,7 +338,7 @@ h3 {
 .features-detail {
     background: var(--gray-50);
     border-radius: 16px;
-    padding: 48px;
+    padding: 64px 48px 48px;
     min-height: 400px;
 }
 
@@ -351,16 +351,18 @@ h3 {
     flex-direction: column;
     gap: 32px;
     animation: fadeIn 0.3s ease;
+    padding-top: 16px;
 }
 
 .feature-screenshot {
     width: 100%;
     max-width: 100%;
     height: auto;
-    border-radius: 12px;
+    border-radius: 8px;
     border: 1px solid var(--gray-200);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     background: var(--white);
+    margin-top: 8px;
 }
 
 @keyframes fadeIn {
