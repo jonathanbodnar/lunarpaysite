@@ -347,8 +347,20 @@ h3 {
 }
 
 .feature-detail-content.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
     animation: fadeIn 0.3s ease;
+}
+
+.feature-screenshot {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid var(--gray-200);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background: var(--white);
 }
 
 @keyframes fadeIn {
@@ -359,6 +371,7 @@ h3 {
 .feature-detail-content h3 {
     font-size: 1.75rem;
     margin-bottom: 16px;
+    margin-top: 0;
 }
 
 .feature-detail-content > p {
@@ -366,6 +379,7 @@ h3 {
     font-size: 17px;
     line-height: 1.7;
     margin-bottom: 24px;
+    margin-top: 0;
 }
 
 .feature-detail-content ul {
@@ -886,6 +900,14 @@ h3 {
         order: 2;
         padding: 32px;
         min-height: auto;
+    }
+    
+    .feature-detail-content.active {
+        gap: 24px;
+    }
+    
+    .feature-screenshot {
+        border-radius: 8px;
     }
     
     .features-tabs {
