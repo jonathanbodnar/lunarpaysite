@@ -400,20 +400,37 @@
         window.addEventListener('scroll', handleStickySignup);
         handleStickySignup();
 
+        // Grab UTM params from the current URL
+        function getUtmParams() {
+            const params = new URLSearchParams(window.location.search);
+            const utm = {};
+            ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(function(key) {
+                const val = params.get(key);
+                if (val) utm[key] = val;
+            });
+            return utm;
+        }
+
         // Handle signup form submission — capture lead then redirect
         async function handleSignup(event, form) {
             event.preventDefault();
             const emailInput = form.querySelector('input[type="email"]');
             const email = (emailInput && emailInput.value) ? emailInput.value.trim() : '';
             if (!email) return;
+            var utm = getUtmParams();
             try {
                 await fetch('/api/leads', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email: email, source: 'landing_page' }),
+                    body: JSON.stringify(Object.assign({ email: email, source: 'landing_page' }, utm)),
                 });
             } catch (_) {}
-            window.location.href = `https://app.lunarpay.com/register?email=${encodeURIComponent(email)}`;
+            // Pass UTM params through to the register page
+            var registerUrl = 'https://app.lunarpay.com/register?email=' + encodeURIComponent(email);
+            Object.keys(utm).forEach(function(key) {
+                registerUrl += '&' + key + '=' + encodeURIComponent(utm[key]);
+            });
+            window.location.href = registerUrl;
         }
 
         // Feature tabs
