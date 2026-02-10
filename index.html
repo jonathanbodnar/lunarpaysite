@@ -400,14 +400,20 @@
         window.addEventListener('scroll', handleStickySignup);
         handleStickySignup();
 
-        // Handle signup form submission
-        function handleSignup(event, form) {
+        // Handle signup form submission — capture lead then redirect
+        async function handleSignup(event, form) {
             event.preventDefault();
             const emailInput = form.querySelector('input[type="email"]');
-            const email = emailInput.value;
-            if (email) {
-                window.location.href = `https://app.lunarpay.com/register?email=${encodeURIComponent(email)}`;
-            }
+            const email = (emailInput && emailInput.value) ? emailInput.value.trim() : '';
+            if (!email) return;
+            try {
+                await fetch('https://app.lunarpay.com/api/leads', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: email, source: 'landing_page' }),
+                });
+            } catch (_) {}
+            window.location.href = `https://app.lunarpay.com/register?email=${encodeURIComponent(email)}`;
         }
 
         // Feature tabs
