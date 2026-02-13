@@ -9,6 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="public/ico.png">
+    <!-- Rumble Ad Tag -->
+    <script async src="https://a.ads.rmbl.ws/ratag?id=AV-45700"></script>
+    <script>
+        window._ratagData = window._ratagData || [];
+        function ratag() {_ratagData.push(arguments);}
+    </script>
+    <!-- End Rumble Ad Tag -->
     <!-- Meta Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s)
@@ -425,11 +432,14 @@
                     body: JSON.stringify(Object.assign({ email: email, source: 'landing_page' }, utm)),
                 });
             } catch (_) {}
-            // Pass UTM params through to the register page
+            // Pass UTM params and Rumble click ID through to the register page
             var registerUrl = 'https://app.lunarpay.com/register?email=' + encodeURIComponent(email);
             Object.keys(utm).forEach(function(key) {
                 registerUrl += '&' + key + '=' + encodeURIComponent(utm[key]);
             });
+            // Forward Rumble _raclid if present
+            var raclid = new URLSearchParams(window.location.search).get('_raclid');
+            if (raclid) registerUrl += '&_raclid=' + encodeURIComponent(raclid);
             window.location.href = registerUrl;
         }
 
