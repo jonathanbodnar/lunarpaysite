@@ -473,7 +473,7 @@
     <style>
         #fomo-popup {
             position: fixed;
-            bottom: 24px;
+            bottom: 80px;
             left: 24px;
             z-index: 9999;
             background: #fff;
@@ -537,7 +537,7 @@
             flex-shrink: 0;
         }
         @media (max-width: 480px) {
-            #fomo-popup { left: 12px; right: 12px; bottom: 12px; max-width: none; }
+            #fomo-popup { left: 12px; right: 12px; bottom: 70px; max-width: none; }
         }
     </style>
     <div id="fomo-popup">
@@ -574,8 +574,8 @@
                 setTimeout(function() {
                     popup.classList.remove('visible');
                     idx++;
-                    setTimeout(showNext, 1000);
-                }, 2000);
+                    setTimeout(showNext, 3000);
+                }, 3000);
             }
 
             fetch('/api/fomo')
