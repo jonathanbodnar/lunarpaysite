@@ -23,6 +23,17 @@ app.post('/api/leads', async (req, res) => {
   }
 });
 
+// FOMO social proof widget data — proxies from app.lunarpay.com
+app.get('/api/fomo', async (req, res) => {
+  try {
+    const response = await fetch('https://app.lunarpay.com/api/public/fomo');
+    const data = await response.json();
+    res.json(data);
+  } catch (err) {
+    res.json({ names: [] });
+  }
+});
+
 // Serve static files from the root directory
 app.use(express.static(__dirname));
 
